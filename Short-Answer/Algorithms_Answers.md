@@ -11,6 +11,7 @@ a) while a < n^2
     n = 2 a = 4 0(1)
 
 #Answer Exercise a: 0(1) time complexity, 0(1) space complexity
+#example values runtime doesn't change as n increases
 
 #Exercise Ib
 n = 5
@@ -32,6 +33,7 @@ sum = 0
             sum += 1
 
 #Answer Exercise Ib: time complexity 0(n^3), 0(1) space complexity
+#nested loops of runtime O(n) aside from the final loop which is constant
 
 #exercise Ic
 
@@ -48,6 +50,7 @@ c)  def bunnyEars(bunnies):
 
 
 #Answer Exercise Ic: time complexity 0(n), 0(n) space complexity
+#only one recursive call is made each iteration hence time O(n) linear stack growth because of this as well.
 
 #exercise II
 
