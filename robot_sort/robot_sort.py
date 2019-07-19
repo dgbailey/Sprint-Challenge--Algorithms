@@ -92,12 +92,84 @@ class SortingRobot:
         """
         return self._light == "ON"
 
+    def helper(self):
+        while self.can_move_left():
+            self.move_left()
+            
+
     def sort(self):
         """
         Sort the robot's list.
         """
+        
+        self.set_light_on()
+      
+
+        while self.light_is_on():
+                
+
+               
+                self.helper()
+                    
+
+                
+
+                
+                self.set_light_off()
+    
+                while self.can_move_right():
+                    
+                    self.swap_item()
+
+                    if self.can_move_right() is True:
+                        self.move_right()
+
+                        if self.compare_item() is None:
+                            pass
+                        
+                        elif self.compare_item() == 0:#come back to this case
+                            if self.can_move_left():
+                                self.move_left()
+                                self.swap_item()
+                                self.move_right()
+
+                        elif self.compare_item() == -1:
+                            
+                            if self.can_move_left():
+                                self.move_left()
+                                # self.set_light_on()
+                                self.swap_item()
+                                
+                                self.move_right()
+                                
+                        elif self.compare_item() == 1:
+                            self.swap_item()
+                            self.set_light_on()
+                            if self.can_move_left():
+                                self.move_left()
+                                self.swap_item()
+                        
+                        else:
+                                if self.can_move_left():
+                                    self.move_left()
+                                    # self.set_light_on
+                                    self.swap_item()
+                                    
+                                    self.move_right()
+
+                                    
+        
+            
+
+
+
+
+
         # Fill this out
-        pass
+        
+        
+
+    
 
 
 if __name__ == "__main__":
